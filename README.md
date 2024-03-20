@@ -11,6 +11,14 @@ Objective:
 I should be able to move and copy data from register-register or memory-register, as well as memory-memory
 at the end of this chapter.
 
+Data_Types
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+This section simply explores as to how some information are stored in the memory.
+1. Strings are simply stored in consecutive ASCII representations of the characters.
+2. Fractional numbers, signed and unsigned, which are necessary when dealing with real-word measurements and even calculations, are stored in the IEEE 754 32-bit format. Consisting of the sign bit (0+, 1-) then the bias which is 8-bits then the exponent, all amount to the 32-bits. It is stored first with the least significant bits and then per byte.
+3. Integers or any number except when defined as .float, are stored in their direct binary format or hex, negatives are in two's complement. The .int can't accept fractional numbers, unlike higher level languages, do not automatically round to the integer.
+4. Characters are also stored in their ASCII format.
+
 DataMove_1
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 This section covers data movement:
