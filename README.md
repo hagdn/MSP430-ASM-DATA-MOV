@@ -15,7 +15,7 @@ Data_Types
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 This section simply explores as to how some information are stored in the memory.
 1. Strings are simply stored in consecutive ASCII representations of the characters.
-2. Fractional numbers, signed and unsigned, which are necessary when dealing with real-word measurements and even calculations, are stored in the IEEE 754 32-bit format. Consisting of the sign bit (0+, 1-) then the bias which is 8-bits then the exponent, all amount to the 32-bits. It is stored first with the least significant bits and then per byte.
+2. Fractional numbers, signed and unsigned, which are necessary when dealing with real-word measurements and even calculations, are stored in the IEEE 754 32-bit format. Consisting of the sign bit (0+, 1-) then the bias which is 8-bits then the exponent, all amount to the 32-bits. It is stored first with the least significant bits and then per byte. Another important note is numbers like 0.025 are not accurately represented as exactly 0.025, there are errors, for example, converting back the stored 4-byte IEEE 754 to decimal of the 0.025 is 0.02500000037252902984619140625, a heads up in case precision is very important.
 3. Integers or any number except when defined as .float, are stored in their direct binary format or hex, negatives are in two's complement. The .int can't accept fractional numbers, unlike higher level languages, do not automatically round to the integer.
 4. Characters are also stored in their ASCII format.
 
